@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <title>Didit Setia Budi Portfolio</title>
+       <link rel="icon" href="data:image/svg+xml,
+      <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>
+        <circle cx='50' cy='50' r='45' fill='red'/>
+      </svg>" />
+    
+
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/unicons.css" />
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="css/owl.theme.default.min.css" />
+
+    <!-- MAIN STYLE -->
+    <link rel="stylesheet" href="css/tooplate-style.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      rel="stylesheet"
+    />
+
+
+
+    <style>
+      /* Default: light mode */
+      body.light-mode #mainNavbar {
+        background-color: #ffffff;
+        color: #000;
+      }
+
+
+
+      body.dark-mode #mainNavbar {
+        background-color: #0c0c0d;
+        color: #fff;
+      }
+
+      /* Transisi lembut */
+      #mainNavbar {
+        transition: background-color 0.1s, color 0.1s;
+      }
+
+      /* Biar konten tidak ketutupan navbar */
+      body {
+        padding-top: 70px; /* sesuaikan tinggi navbar */
+      }
+
+      /* Default background putih kalau belum ada class mode */
+      #mainNavbar {
+        background-color: #fff;
+        color: #000;
+      }
+
+      .about {
+        /* min-height: 100vh;  */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        /* margin-top: 80px; */
+      }
+
+      /* ======== Text Alignment ======== */
+      .animated-text {
+        font-weight: 700;
+        font-size: 3rem;
+        color: #222;
+        white-space: nowrap;
+      }
+
+      .animated-info {
+        display: inline-block;
+        vertical-align: middle;
+        position: relative;
+        height: 3.6rem;
+        overflow: hidden;
+      }
+
+      .animated-item {
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: #f8b400;
+        opacity: 0;
+        animation: fadeText 9s infinite;
+      }
+
+      .animated-item:nth-child(1) {
+        animation-delay: 0s;
+      }
+
+      .animated-item:nth-child(2) {
+        animation-delay: 3s;
+      }
+
+      .animated-item:nth-child(3) {
+        animation-delay: 6s;
+      }
+
+      @keyframes fadeText {
+        0% {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        10%,
+        30% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+        33%,
+        100% {
+          opacity: 0;
+          transform: translateY(-10px);
+        }
+      }
+
+      /* Responsif */
+      @media (max-width: 768px) {
+        .animated-text {
+          font-size: 2rem;
+        }
+        .animated-info {
+          display: inline-block;
+          position: relative;
+          vertical-align: baseline;
+          overflow: visible; /* jangan potong teks */
+          height: auto; /* biar menyesuaikan tinggi font */
+          line-height: 1.2; /* jarak antar teks */
+        }
+
+        .animated-item {
+          position: absolute;
+          left: 0;
+          top: 0;
+          white-space: nowrap;
+          color: #f8b400;
+          font-weight: 700;
+          animation: fadeText 9s infinite;
+          transform-origin: left center;
+        }
+
+        .animated-text {
+          display: inline-block;
+          white-space: nowrap;
+        }
+      }
+
+      .animated-wrap {
+        position: relative;
+        display: inline-block;
+        width: 320px; /* ubah sesuai kebutuhan, pastikan cukup untuk teks terpanjang */
+        height: 2.5rem; /* tinggi sesuai ukuran font */
+        overflow: hidden; /* sembunyikan teks yang di luar area */
+        text-align: left; /* center teks */
+      }
+
+      .animated-wrap2 {
+        position: relative;
+        display: inline-block;
+        width: 320px; /* ubah sesuai kebutuhan, pastikan cukup untuk teks terpanjang */
+        height: 3rem; /* tinggi sesuai ukuran font */
+        overflow: hidden; /* sembunyikan teks yang di luar area */
+        text-align: center; /* center teks */
+      }
+
+      .animated-item {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        color: #f8b400;
+        font-weight: 700;
+        font-size: 2rem;
+        opacity: 0;
+        white-space: nowrap;
+        animation: fadeText 9s infinite;
+      }
+
+      /* Animasi pergantian teks */
+      @keyframes fadeText {
+        0%,
+        100% {
+          opacity: 0;
+          transform: translateY(100%);
+        }
+        10%,
+        30% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+        40%,
+        90% {
+          opacity: 0;
+          transform: translateY(-100%);
+        }
+      }
+
+      /* Urutan munculnya teks */
+      .animated-item:nth-child(1) {
+        animation-delay: 0s;
+      }
+      .animated-item:nth-child(2) {
+        animation-delay: 3s;
+      }
+      .animated-item:nth-child(3) {
+        animation-delay: 6s;
+      }
+
+      /* ==== HILANGKAN DI LAYAR KECIL ==== */
+      @media (max-width: 769px) {
+        .animated-info {
+          display: none;
+        }
+      }
+
+      @media (min-width: 768px) {
+        .animated-wrap2 {
+          display: none;
+        } /* sembunyikan di layar besar */
+      }
+
+      /* Hilangkan garis bawah navbar */
+      .navbar,
+      .headroom,
+      header {
+        border-bottom: none !important;
+        box-shadow: none !important;
+      }
+
+      .social-links {
+        display: flex; /* biar sejajar ke samping */
+        gap: 15px; /* jarak antar icon */
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        justify-content: center; /* rata tengah */
+      }
+
+      .social-links li a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+        border: 1px solid #555; /* outline lingkaran */
+        border-radius: 50%; /* bikin bulat */
+        color: #aaa; /* warna icon */
+        font-size: 20px;
+        transition: all 0.3s ease;
+      }
+
+      .social-links li a:hover {
+        color: #fff; /* warna icon saat hover */
+        border-color: #fff; /* warna lingkaran saat hover */
+        background: #222; /* opsional: bg saat hover */
+      }
+
+      .skills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .tag {
+        display: inline-block;
+        padding: 6px 14px;
+        border: 1px solid #ccc;
+        border-radius: 20px;
+        background-color: #f9f9f9;
+        font-size: 14px;
+        color: #333;
+        cursor: default;
+        transition: all 0.2s;
+      }
+
+      .tag:hover {
+        background-color: #eaeaea;
+        border-color: #aaa;
+      }
+    </style>
+
+    <script>
+      const toggle = document.getElementById("colorModeToggle");
+      const body = document.body;
+
+      // Set default mode ke light
+      window.addEventListener("DOMContentLoaded", () => {
+        if (
+          !body.classList.contains("dark-mode") &&
+          !body.classList.contains("light-mode")
+        ) {
+          body.classList.add("light-mode");
+        }
+      });
+
+      // Toggle mode saat diklik
+      toggle.addEventListener("click", () => {
+        body.classList.toggle("dark-mode");
+        body.classList.toggle("light-mode");
+      });
+    </script>
+  </head>
+  <body>
+    <!-- MENU -->
+
+    <nav
+      class="navbar navbar-expand-sm navbar-light"
+      id="mainNavbar"
+      style="
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1030;
+        transition: background-color 0.4s, color 0.4s;
+      "
+    >
+      <div class="container" style="margin-top: 20px">
+        <a class="navbar-brand" href="index.html">
+          <img
+            src="images/undraw/ppdiditsb.png"
+            alt="Logo"
+            style="height: 45px; width: auto; margin-right: 6px"
+          />
+          DIDIT SB
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+          <span class="navbar-toggler-icon"></span>
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a href="#about" class="nav-link"
+                ><span data-hover="About">About</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="#project" class="nav-link"
+                ><span data-hover="Projects">Projects</span></a
+              >
+            </li>
+             <li class="nav-item">
+              <a href="#skills" class="nav-link"
+                ><span data-hover="Skills">Skills</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="#resume" class="nav-link"
+                ><span data-hover="Resume">Resume</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="#contact" class="nav-link"
+                ><span data-hover="Contact">Contact</span></a
+              >
+            </li>
+          </ul>
+
+          <ul class="navbar-nav ml-lg-auto">
+            <div class="ml-lg-4">
+              <div
+                class="color-mode d-lg-flex justify-content-center align-items-center"
+                id="colorModeToggle"
+                style="cursor: pointer"
+              >
+                <i class="color-mode-icon"></i>
+                <!-- Color mode -->
+              </div>
+            </div>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+
+    <section
+      class="about full-screen d-flex justify-content-center align-items-center text-center"
+      id="about"
+    >
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 col-md-12 col-12">
+            <div class="about-text">
+              <small class="small-text">
+                Welcome to
+                <span class="mobile-block">my portfolio website!</span>
+              </small>
+
+              <h1 class="mt-3 animated-text">
+                <span class="static-text">Hello World, I'm&nbsp;</span>
+                <span class="animated-info">
+                  <div class="animated-wrap">
+                    <span class="animated-item">Didit Setia Budi</span>
+                    <span class="animated-item">Frontend Developer</span>
+                    <span class="animated-item">Mobile Developer</span>
+                  </div>
+                </span>
+              </h1>
+
+              <div class="animated-wrap2">
+                <span class="animated-item">Didit Setia Budi</span>
+                <span class="animated-item">Frontend Developer</span>
+                <span class="animated-item">Mobile Developer</span>
+              </div>
+
+              <p class="mt-3">
+                Front-end & Mobile Developer with 6+ years of experience
+                building web and mobile applications using Flutter, React
+                Native, HTML, CSS, JavaScript, and PHP. Skilled in both startup
+                and corporate environments, highly adaptable, capable of
+                developing products from scratch or enhancing existing systems.
+                Focused on delivering high-quality UI/UX and ensuring efficient,
+                scalable, and user-oriented development processes.
+              </p>
+
+              <div class="custom-btn-group mt-4">
+                <!-- <a 
+                target="_blank"
+                  href="https://drive.google.com/file/d/188LESNIk6DnMxvrilsV_8by8PTirur1j/view?usp=sharing"
+                  download=""
+                  title="Download File"
+                 class="btn mr-lg-2 custom-btn">
+                  <i class="uil uil-file-alt"></i> Get My  Resume
+                </a> -->
+                <a
+                  target="_blank"
+                  href="https://drive.google.com/file/d/188LESNIk6DnMxvrilsV_8by8PTirur1j/view?usp=sharing"
+                  download=""
+                  title="Download File"
+                  class="btn mr-lg-2 custom-btn"
+                >
+                  <i class="uil uil-file-alt"></i>
+         
+                  Get My CV</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="project py-5" id="project">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-11 text-center mx-auto col-12">
+            <div class="col-lg-8 mx-auto">
+              <h2>
+                I have contributed to diverse projects across different domains
+              </h2>
+            </div>
+
+            <div class="owl-carousel owl-theme">
+              <div class="item">
+                <div class="project-info">
+                  <img
+                    src="images/project/project-image01.png"
+                    class="img-fluid"
+                    alt="project image"
+                  />
+                </div>
+              </div>
+
+              <div class="item">
+                <div class="project-info">
+                  <img
+                    src="images/project/project-image02.png"
+                    class="img-fluid"
+                    alt="project image"
+                  />
+                </div>
+              </div>
+
+              <div class="item">
+                <div class="project-info">
+                  <img
+                    src="images/project/project-image03.png"
+                    class="img-fluid"
+                    alt="project image"
+                  />
+                </div>
+              </div>
+
+              <div class="item">
+                <div class="project-info">
+                  <img
+                    src="images/project/project-image04.png"
+                    class="img-fluid"
+                    alt="project image"
+                  />
+                </div>
+              </div>
+
+              <div class="item">
+                <div class="project-info">
+                  <img
+                    src="images/project/project-image05.png"
+                    class="img-fluid"
+                    alt="project image"
+                  />
+                </div>
+              </div>
+
+              <div class="item">
+                <div class="project-info">
+                  <img
+                    src="images/project/project-image06.png"
+                    class="img-fluid"
+                    alt="project image"
+                  />
+                </div>
+              </div>
+
+              <div class="item">
+                <div class="project-info">
+                  <img
+                    src="images/project/project-image07.png"
+                    class="img-fluid"
+                    alt="project image"
+                  />
+                </div>
+              </div>
+
+              <div class="item">
+                <div class="project-info">
+                  <img
+                    src="images/project/project-image08.png"
+                    class="img-fluid"
+                    alt="project image"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="project py-5" id="skills">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-11 text-center mx-auto col-12">
+            <div class="col-lg-8 mx-auto">
+              <h2>Skills</h2>
+
+     
+            </div>
+
+        
+        </div>
+      </div>
+    </section>
+
+     <section
+      class="resume py-1 d-lg-flex justify-content-center align-items-center"
+      id="resumeskill"
+    >
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 col-12">
+            <!-- <h2 class="mb-4">Experiences</h2> -->
+
+            <div class="timeline">
+              <div class="timeline-wrapper">
+                <!-- <div class="timeline-yr">
+                 
+                </div> -->
+                <div class="timeline-yr" style="font-size: 2rem; color: gold; text-align: center;">
+  ★
+</div>
+                <div class="timeline-info">
+                  <!-- <h3><span>Mobile Developer</span></h3> -->
+                   <h3 style="font-size: large">
+                  <span>Software Development</span>
+                </h3>
+                 <div class="skills" style="margin-top: 32px">
+                  <h3>
+                    <span class="tag" style="font-size: 18px">Flutter</span>
+                  </h3>
+                  <h3>
+                    <span class="tag" style="font-size: 18px"
+                      >React Native</span
+                    >
+                  </h3>
+                  <h3>
+                    <span class="tag" style="font-size: 18px">React Js</span>
+                  </h3>
+                  <h3>
+                    <span class="tag" style="font-size: 18px">Vue Js</span>
+                  </h3>
+                  <h3>
+                    <span class="tag" style="font-size: 18px">Codeigniter</span>
+                  </h3>
+                  <h3>
+                    <span class="tag" style="font-size: 18px"> HTML</span>
+                  </h3>
+                   <h3>
+                    <span class="tag" style="font-size: 18px">CSS</span>
+                  </h3>
+                    <h3>
+                    <span class="tag" style="font-size: 18px">JavaScript</span>
+                  </h3>
+                   <h3>
+                    <span class="tag" style="font-size: 18px">PHP</span>
+                  </h3>
+                    <h3>
+                    <span class="tag" style="font-size: 18px">Bootstrap</span>
+                  </h3>
+                    <h3>
+                    <span class="tag" style="font-size: 18px">Material UI</span>
+                  </h3>
+                    <h3>
+                    <span class="tag" style="font-size: 18px">Tailwind</span>
+                  </h3>
+                    <h3>
+                    <span class="tag" style="font-size: 18px">Rest Api</span>
+                  </h3>
+                    <h3>
+                    <span class="tag" style="font-size: 18px">Postman</span>
+                  </h3>
+                    <h3>
+                    <span class="tag" style="font-size: 18px">Swagger</span>
+                  </h3>
+                    <h3>
+                    <span class="tag" style="font-size: 18px">Mock Api </span>
+                  </h3>
+                  <h3>
+                    <span class="tag" style="font-size: 18px">MySQL </span>
+                  </h3>
+                  <h3>
+                    <span class="tag" style="font-size: 18px">Firebase</span>
+                  </h3>
+                  <h3>
+                    <span class="tag" style="font-size: 18px">Github </span>
+                  </h3>
+                  <h3>
+                    <span class="tag" style="font-size: 18px">Gitlab</span>
+                  </h3>
+                </div>
+                </div>
+              </div>
+
+           
+
+       
+            </div>
+          </div>
+
+            <div class="col-lg-6 col-12">
+            <!-- <h2 class="mb-4">Experiences</h2> -->
+
+            <div class="timeline">
+              <div class="timeline-wrapper">
+                             <div class="timeline-yr" style="font-size: 2rem; color: gold; text-align: center;">
+  ★
+</div>
+                <div class="timeline-info">
+                  <!-- <h3><span>Mobile Developer</span></h3> -->
+                   <h3 style="font-size: large">
+                  <span>General</span>
+                </h3>
+                 <div class="skills" style="margin-top: 32px">
+                  <h3>
+                    <span class="tag" style="font-size: 18px">Ms. Office </span>
+                  </h3>
+                  <h3>
+                    <span class="tag" style="font-size: 18px"
+                      >Adobe Illustrator</span
+                    >
+                  </h3>
+                  <h3>
+                    <span class="tag" style="font-size: 18px">Photoshop</span>
+                  </h3>
+                  <h3>
+                    <span class="tag" style="font-size: 18px">Figma</span>
+                  </h3>
+                 
+                </div>
+                </div>
+              </div>
+
+           
+
+       
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section
+      class="resume py-5 d-lg-flex justify-content-center align-items-center"
+      id="resume"
+    >
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 col-12">
+            <h2 class="mb-4">Experiences</h2>
+
+            <div class="timeline">
+              <div class="timeline-wrapper">
+                <div class="timeline-yr">
+                  <span>2021</span>
+                </div>
+                <div class="timeline-info">
+                  <h3><span>Mobile Developer</span></h3>
+                  <h3>
+                    <small
+                      >PT. Infosys Solusi Terpadu • Jul 2021 – Present</small
+                    >
+                  </h3>
+                  <p>
+                    Responsible for developing mobile applications based on
+                    Figma designs with REST API integration using React Native
+                    and Kony Visualizer. Duties include maintaining the GitHub
+                    repository, bug fixing, building APK and IPA, as well as
+                    supporting all stages of mobile application development.
+                  </p>
+                </div>
+              </div>
+
+              <div class="timeline-wrapper">
+                <div class="timeline-yr">
+                  <span>2020</span>
+                </div>
+                <div class="timeline-info">
+                  <h3><span>Frontend Developer</span></h3>
+                  <h3>
+                    <small
+                      >PT Visi Citra Internasional (VTECH) • Sep 2020 – Jun
+                      2021</small
+                    >
+                  </h3>
+                  <p>
+                    Developed a mobile application using Flutter, built from
+                    scratch based on design references from Figma. Also created
+                    the company’s corporate profile website using HTML, CSS,
+                    PHP, and JavaScript. Worked closely with stakeholders in a
+                    startup environment, contributing to both the product’s
+                    foundation and the company’s early digital presence.
+                    Demonstrated strong ability to translate design into
+                    functional, responsive applications with clean and
+                    maintainable code.
+                  </p>
+                </div>
+              </div>
+
+              <div class="timeline-wrapper">
+                <div class="timeline-yr">
+                  <span>2018</span>
+                </div>
+                <div class="timeline-info">
+                  <h3><span>Frontend Developer</span></h3>
+                  <h3>
+                    <small>Meteor Inovasi Digital • Agu 2018 – Agu 2020</small>
+                  </h3>
+
+                  <p>
+                    Worked on existing mobile applications using React Native
+                    and Flutter frameworks. Contributed to the development and
+                    enhancement of key features for two main products: a digital
+                    wallet application (iWallet) and a music streaming app.
+                    Focused on improving performance, user interface, and
+                    overall functionality while maintaining clean and scalable
+                    code. Collaborated closely with product and QA teams to
+                    ensure smooth app updates and user satisfaction.
+                  </p>
+                </div>
+              </div>
+
+              <div class="timeline-wrapper">
+                <div class="timeline-yr">
+                  <span>2018</span>
+                </div>
+                <div class="timeline-info">
+                  <h3><span>Frontend Developer</span></h3>
+                  <h3>
+                    <small
+                      >PT. Interkoneksi Multitekno • Sep 2017 – Des 2017</small
+                    >
+                  </h3>
+                  <p>
+                    Developed a web-based application using Vue.js, HTML, CSS,
+                    and JavaScript to support the company’s Internal Control
+                    over Financial Reporting (ICFR) system. The platform was
+                    designed to ensure accurate and reliable financial reporting
+                    through well-structured processes and system controls. This
+                    role marked my first experience working in a large corporate
+                    environment, where I gained valuable insights into
+                    professional workflows, structured development processes,
+                    and cross-department collaboration.
+                  </p>
+                </div>
+              </div>
+
+              <div class="timeline-wrapper">
+                <div class="timeline-yr">
+                  <span>2018</span>
+                </div>
+                <div class="timeline-info">
+                  <h3><span>Frontend Developer</span></h3>
+                  <h3>
+                    <small
+                      >PT. Interkoneksi Multitekno • Sep 2017 – Des 2017</small
+                    >
+                  </h3>
+
+                  <p>
+                    Started my professional career as a programmer and
+                    developer. Conducted research and development (R&D) using
+                    React Native for building mobile applications focused on
+                    event management and talent coordination. Gained hands-on
+                    experience in experimenting with cross-platform development,
+                    laying the foundation for future mobile app projects.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-12">
+            <h2 class="mb-4 mobile-mt-2">Educations</h2>
+
+            <div class="timeline">
+              <div class="timeline-wrapper">
+                <div class="timeline-yr">
+                  <span>2017</span>
+                </div>
+                <div class="timeline-info">
+                  <h3>
+                    <span>Bachelor of Computer Science</span>
+                  </h3>
+                  <h3><small>Universitas Ahmad Dahlan</small></h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact py-5" id="contact">
+      <div class="container">
+        <div class="col-lg-12 col-12">
+          <div class="google-map w-100">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3955.196830391371!2d110.36203031533255!3d-7.797068794387013!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a578ad1db0f0f%3A0x502e3aa03a8c0!2sYogyakarta%2C%20Daerah%20Istimewa%20Yogyakarta%2C%20Indonesia!5e0!3m2!1sen!2sid!4v1700000000000"
+              width="400"
+              height="300"
+              frameborder="0"
+              style="border: 0"
+              allowfullscreen
+            ></iframe>
+          </div>
+
+          <div
+            class="contact-info d-flex justify-content-between align-items-center py-4 px-lg-5"
+          >
+            <div class="contact-info-item">
+              <h3 class="mb-3 text-white">Get In Touch</h3>
+              <p class="mb-3 text-white">diditsb007@gmail.com</p>
+          
+              <ul class="social-links">
+                <li>
+                  <a
+                    target="_blank"
+                    href="https://www.linkedin.com/in/didit-setiabudi-55084691/"
+                    title="LinkedIn"
+                    ><i class="fab fa-linkedin-in"></i
+                  ></a>
+                </li>
+                <li>
+                  <a
+                    target="_blank"
+                    href="https://github.com/diditsetia"
+                    title="GitHub"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </li>
+                <li>
+                  <a
+                    target="_blank"
+                    href="https://dribbble.com/kalemstd"
+                    title="Dribbble"
+                    ><i class="fab fa-dribbble"></i
+                  ></a>
+                </li>
+                <li>
+                  <a
+                    target="_blank"
+                    href="https://www.youtube.com/@diditerror"
+                    title="YouTube"
+                    ><i class="fab fa-youtube"></i
+                  ></a>
+                </li>
+                <li>
+                  <a
+                    target="_blank"
+                    href="https://www.instagram.com/didit.sb/"
+                    title="Instagram"
+                    ><i class="fab fa-instagram"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 col-12">
+            <p class="copyright-text text-center">
+              Copyright &copy; 2025 Diditsb . All rights reserved
+            </p>
+            <p class="copyright-text text-center">
+              Designed by
+              <a rel="nofollow" href="https://www.facebook.com/tooplate"
+                >Tooplate</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/Headroom.js"></script>
+    <script src="js/jQuery.headroom.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/smoothscroll.js"></script>
+    <script src="js/custom.js"></script>
+  </body>
+</html>
